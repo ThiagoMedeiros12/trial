@@ -21,14 +21,28 @@ class App:
         self.root.resizable(True, True)
 
 
+        top_frame = self.MainFrame(color="lightgrey", border=1, relief="ridge", pady=3, padx=3)
+        top_frame.pack(fill="both",expand = True)
+
         main_frame = self.MainFrame(color="lightgrey", border=1, relief="ridge", pady=3, padx=3)
         main_frame.pack(fill='both',expand = True)
 
+        bottom_frame = self.MainFrame(color="lightgrey", border=1, relief="ridge", pady=3, padx=3)
+        bottom_frame.pack(fill="both",expand = True)
+
         left_section,middle_section,right_section = self.Create_three_sections(PARENT_FRAME=main_frame)
+        topleft_section,topmiddle_section,topright_section = self.Create_three_sections(PARENT_FRAME=top_frame)
+        bottomleft_section,bottommiddle_section,bottomright_section = self.Create_three_sections(PARENT_FRAME=bottom_frame)
 
         self.Left_label(PARENT_FRAME=left_section)
         self.Middle_label(PARENT_FRAME=middle_section)
         self.Right_label(PARENT_FRAME=right_section)
+        self.Left_label(PARENT_FRAME=topleft_section)
+        self.Middle_label(PARENT_FRAME=topmiddle_section)
+        self.Right_label(PARENT_FRAME=topright_section)
+        self.Left_label(PARENT_FRAME=bottomleft_section)
+        self.Middle_label(PARENT_FRAME=bottommiddle_section)
+        self.Right_label(PARENT_FRAME=bottomright_section)
 
         self.root.mainloop()
 
