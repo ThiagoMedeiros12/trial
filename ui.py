@@ -1,4 +1,3 @@
-import ctypes
 from tkinter import Tk,Frame, Label, ttk
 import logging
 
@@ -21,11 +20,6 @@ class App(Tk):
 
 
         self.mainloop()
-
-
-
-
-
 
 
 
